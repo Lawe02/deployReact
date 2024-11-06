@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: "16"
       - name: stuff
-        run: cd frontend
+        run: cd ..
       - name: Install dependencies
         run: npm install
       - name: Run tests
