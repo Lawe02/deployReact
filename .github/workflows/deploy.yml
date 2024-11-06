@@ -30,11 +30,6 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Configure Git author for GitHub Pages
-        run: |
-          git config --global user.email "lawza02@gmail.com"
-          git config --global user.name "Lawe02"
-
       - name: Deploy to GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
