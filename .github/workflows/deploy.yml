@@ -33,7 +33,7 @@ jobs:
       - name: Configure Git author for GitHub Pages
         run: |
           git config --global user.email "lawza02@gmail.com"
-          git config --global user.name "lawza02@gmail.com"
+          git config --global user.name "Lawe02"
 
       - name: Deploy to GitHub Pages
         env:
