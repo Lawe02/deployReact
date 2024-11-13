@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useUser } from "@clerk/clerk-react";
-import { postjokes } from "../api/api.ts";
+import {postjokes} from "../api/api.ts";
 
 export function AddJokeForm() {
   const [joke, setJoke] = useState("");
-  const { user } = useUser();
-  const email: string | undefined = user?.primaryEmailAddress?.emailAddress;
+  const {user} = useUser();
+  const email = user?.primaryEmailAddress?.emailAddress;
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event) => {
     try {
       postjokes(email, joke);
     } catch (error) {
