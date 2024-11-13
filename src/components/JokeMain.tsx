@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { joke } from "./Joke";
 import JokeCard from "./JokeCard";
 import { fetchJokes } from "../api/api";
