@@ -7,7 +7,7 @@ export function AddJokeForm() {
   const {user} = useUser();
   const email = user?.primaryEmailAddress?.emailAddress;
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async () => {
     try {
       postjokes(email, joke);
     } catch (error) {

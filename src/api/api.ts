@@ -6,7 +6,7 @@ export const fetchJokes = async (): Promise<joke[]> => {
     return response.json();
 }
 
-export const postjokes = async (email: string, joke: string): Promise<joke> => {
+export const postjokes = async (email: string | undefined, joke: string): Promise<joke> => {
     const response = await fetch(`${path}/api/jokes`, {
         method: "POST",
         headers: {
